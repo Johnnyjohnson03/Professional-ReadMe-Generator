@@ -1,9 +1,23 @@
-# Generate MarkDown
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+function renderLicenseBadge(license) {}
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {}
+
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+  return `# ${data.title}
   
 
   ## Description
   
-  Learning how to generate markdown is important to understand when learning how to create a proper README file. This will help guide users by giving them a clear descriptive process for up coming projects.
+  ${data.description}
   
   ## Table of Contents (Optional)
   
@@ -16,11 +30,11 @@
   
   ## Installation
   
-    
+  ${data.installation}  
 
   ## Usage
   
-  
+  ${data.usage}
   
   To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
   
@@ -42,7 +56,7 @@
   
   ---
   
-  MIT
+  ${data.license}
   
   ## Badges
   
@@ -56,8 +70,12 @@
   
   ## How to Contribute
   
-  
+  ${data.contribution}
   
   ## Tests
   
-  Once you create a generator on VS Code, open up a terminal and run the node index. It will then provide you with a series of questions to answer.  
+  ${data.test}
+`;
+}
+
+module.exports = generateMarkdown;
